@@ -34,3 +34,20 @@ print(python01.strip())
 # Syntax Error con strings
 message = 'Una fortaleza de python es su comunidad' 
 print(message)
+
+first_name = "Taylor"
+last_name = "Switf"
+full_name = first_name + " " + last_name
+print(full_name)
+#f-strings
+famous_Person = ""
+message =  "una vez dijo me voy al oxxo en avion"
+
+"""
+Elige el nombre de uan persona famosa (quien quieras)
+Elige una cita famosa de esa persona
+Iguala ambos strings a una variable
+
+1} Realiza la concatenación usando signo de suma
+2} Realiza la concatenación usando f-strings
+"""
