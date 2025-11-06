@@ -70,7 +70,19 @@ motorcycles.sort(reverse=True)
 print(motorcycles)
 
 students = ["josue", "victor", "ana", "mike", "paulo", "gerardo"]
-print(students)
+students.sort()
+print("\n", students)
 desired_students = input("Elige estudiante a eliminar: ")
 students.remove(desired_students.strip().lower())
+students.sort(reverse=True)
 print(students)
+
+print("El total de personas en la lista es de: ", len(students))
+
+print("\n")
+
+cars = ['chevy', 'cavalier', 'ram', 'suburban', 'silverado']
+print(sorted(cars))
+sorted_list = sorted(cars)
+print("lista ordenada temporalmente: ", sorted_list)
+print("lista original: ", cars)
