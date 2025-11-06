@@ -68,3 +68,9 @@ print(motorcycles)
 print("\n")
 motorcycles.sort(reverse=True)
 print(motorcycles)
+
+students = ["josue", "victor", "ana", "mike", "paulo", "gerardo"]
+print(students)
+desired_students = input("Elige estudiante a eliminar: ")
+students.remove(desired_students.strip().lower())
+print(students)
