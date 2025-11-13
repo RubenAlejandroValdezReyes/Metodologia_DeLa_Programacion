@@ -25,4 +25,4 @@ my_foods = ["pizza", "tacos", "totopos", "flautas", "gorditas", "pollo feliz"]
 #Error: esta no es la manera de copiar una lista
 my_foods_1 = my_foods[:]
 my_foods_2 = my_foods.copy()
-my_foods_3 - list(my_foods)
+my_foods_3 = list(my_foods)
