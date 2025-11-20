@@ -44,3 +44,6 @@ for guiso in pedido_1:
     else:
         print(f"Lo siento, no tenemos {guiso}.")
 print("\nTu orden está lista.")
+
+student = {"name:" "gabriel"}
+student_1 = {"name": "Cesia", "age" 18}
