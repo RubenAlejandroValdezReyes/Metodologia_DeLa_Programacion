@@ -7,12 +7,17 @@ while condición:
 """
 #While infinito
 while True:
-    print("Este ciclo es infinito")
-    
-while true:
-    try  number = int(input("Ingresa un número mayor a 100: "))
-    if number >= 25 and number  <= 50:
-        
-    else:
-        print("Felicidades, ingresaste un número mayor a 100")
+    try:
+        number = int(input("Ingresa un número entre 10 y 20: "))
+        if 10 <= number <= 20:
+            print("Numero dentro del rango")
+            break  # Salir del ciclo si el número es válido
+        else:
+            print("Número fuera del rango, intenta de nuevo.")
+    except ValueError:
+        print("Entrada inválida, por favor ingresa un número entero.")
+    except KeyboardInterrupt:
+        print("\nProceso interrumpido por el usuario.")
         break
+
+print("saliste del while")
