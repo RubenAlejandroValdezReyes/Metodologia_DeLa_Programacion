@@ -50,12 +50,7 @@ y garantizar que las operaciones de datos sean robustas y comprensibles.
 """
 items = []
 
-# -----------------------------------------
-# Utility Functions
-# -----------------------------------------
-
 def find_item_index_by_id(item_id):
-    """Return index of item by ID, or None if not found."""
     for idx, item in enumerate(items):
         if item.get("id") == item_id:
             return idx
@@ -63,14 +58,8 @@ def find_item_index_by_id(item_id):
 
 
 def validate_item_existence(item_id):
-    """Return (exists, index) for cleaner code."""
     index = find_item_index_by_id(item_id)
     return (index is not None, index)
-
-
-# -----------------------------------------
-# CRUD Operations
-# -----------------------------------------
 
 def create_item(item_id, name, price, quantity):
     exists, _ = validate_item_existence(item_id)
@@ -86,7 +75,6 @@ def create_item(item_id, name, price, quantity):
         "quantity": quantity,
     }
 
-    # Adding item with confirmation check
     items.append(new_item)
     if new_item in items:
         print("Item created")
@@ -112,7 +100,6 @@ def update_item(item_id, new_name, new_price, new_quantity):
 
     current_item = items[index]
 
-    # Updating fields individually for control
     current_item["name"] = new_name
     current_item["price"] = new_price
     current_item["quantity"] = new_quantity
@@ -142,11 +129,6 @@ def list_items():
     for it in items:
         print(it)
 
-
-# -----------------------------------------
-# Input Handling
-# -----------------------------------------
-
 def input_float(prompt):
     text = input(prompt)
     try:
@@ -169,11 +151,6 @@ def input_int(prompt):
     except:
         print("Error: invalid input")
         return None
-
-
-# -----------------------------------------
-# MAIN MENU LOOP
-# -----------------------------------------
 
 def print_menu():
     print("\nMenu:")
